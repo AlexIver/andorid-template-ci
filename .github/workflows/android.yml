@@ -25,7 +25,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v1
       with:
-        name: output
-        path: app/build/outputs/
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
