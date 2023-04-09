@@ -24,8 +24,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: app.html
-        path: ./app/build/reports/lint-results-debug.html
+    - name: Display structure of downloaded files
+      run: ls -R
+#    - name: Download all workflow run artifacts
+#      uses: actions/download-artifact@v3
+#      with:
+#        name: app.html
+#        path: ./app/build/reports/lint-results-debug.html
